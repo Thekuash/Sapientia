@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonte base */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #2d3b48;
+    color: #ecf0f1;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #4a5a67;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  header .edition {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #bdc3c7;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  
+  /* Conteúdo principal */
+  main {
+    padding: 30px 20px;
+  }
+  
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    border-left: 4px solid #4a8f99;
+    padding-left: 12px;
+  }
+  
+  /* Capa do livro */
+  .book-cover {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .book-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+  }
+  
+  .book-cover img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Lista */
+  ul {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+  
+  ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4a8f99;
+  }
+  
+  /* Código */
+  pre {
+    background-color: #eef2f3;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    margin-bottom: 25px;
+    border-left: 4px solid #4a8f99;
+    color: #2c3e50;
+  }
+  
+  /* Parágrafo */
+  .content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  /* Botão */
+  .button-container {
+    text-align: center;
+  }
+  
+  .download-button {
+    display: inline-block;
+    background-color: #4a8f99;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #397f8f;
+    transform: translateY(-2px);
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #2d3b48;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    border-bottom: 1px dashed #7a9a92;
+  }
+  
+  footer a:hover {
+    color: #7a9a92;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .content {
+      padding: 20px;
+    }
+  
+    .download-button {
+      padding: 12px 22px;
+      font-size: 1rem;
+    }
+  }
+  .modal {
+    display: none; /* garante que fique invisível até ser acionado */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close:hover {
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+    

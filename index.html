@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Algorithms - Segunda Edição (Traduzido)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById("previewModal");
+      const openBtn = document.getElementById("openPreview");
+      const closeBtn = modal.querySelector(".close");
+  
+      openBtn.onclick = () => modal.style.display = "flex";
+      closeBtn.onclick = () => modal.style.display = "none";
+      window.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      };
+    });
+  </script>
+  
+<body>
+  <header>
+    <h1>Introduction to Algorithms<br><span class="edition">Segunda Edição (Traduzido)</span></h1>
+    <p>Um guia essencial para entender os algoritmos fundamentais e sua aplicação no mundo real.</p>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>O que você encontrará neste ebook:</h2>
+
+      <div class="book-cover">
+        <img src="assets/capa.jpg"" alt="Capa do livro" id="openPreview" style="cursor: pointer;" title="Clique para visualizar uma prévia">
+      </div>
+      
+      <!-- Modal escondido inicialmente -->
+      <div id="previewModal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="assets/preview.png" alt="Prévia do livro" style="width: 100%; border-radius: 8px;">
+        </div>
+      </div>
+      
+          
+          
+          
+      </div>
+
+      <ul>
+        <li>Conceitos fundamentais de algoritmos</li>
+        <li>Estruturas de dados eficientes</li>
+        <li>Análise de complexidade</li>
+        <li>Algoritmos de ordenação e busca</li>
+        <li>Algoritmos em grafos</li>
+      </ul>
+
+      <pre>
+Para j de 2 até n
+   chave ← A[j]
+   i ← j - 1
+   enquanto i > 0 e A[i] > chave
+      A[i+1] ← A[i]
+      i ← i - 1
+   A[i+1] ← chave
+      </pre>
+
+      <p>Este livro é ideal para estudantes, pesquisadores e desenvolvedores que desejam aprofundar seus conhecimentos em algoritmos e estruturas de dados.</p>
+
+      <div class="button-container">
+        <a href="ebook.pdf" class="download-button" download>📥 Baixar Ebook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Projeto de Tradução Técnica. <a href="saiba-mais.html">Saiba mais</a></p>
+  </footer>
+</body>
+</html>
